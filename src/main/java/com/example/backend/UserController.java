@@ -15,9 +15,18 @@ public class UserController {
     @Autowired 
     UserRepository ur;
 
+    @GetMapping("/")
+    String home(){
+        return "Welcome to User Management API! Available endpoints: /demo, /users, /register";
+    }
+
     @GetMapping("/demo")
     String demo(){
         return "Hello World";
+    }
+    @GetMapping("/")
+    String home(){
+        return "Welcome to User Management API! Available endpoints: /demo, /users, /register";
     }
     @GetMapping("/users")
     String getUsers(){
